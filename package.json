@@ -22,7 +22,7 @@
     "yup": "^0.32.9"
   },
   "scripts": {
-    "commit":"git-cz",
+    "commit":"git-czg",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
