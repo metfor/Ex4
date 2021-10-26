@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components';
-
-export const Container = styled.div`
+interface containerProps {
+  available: boolean;
+}
+export const Container = styled.div<containerProps>`
   background: #f0f0f5;
   border-radius: 8px;
 
@@ -12,9 +14,9 @@ export const Container = styled.div`
     transition: 0.3s opacity;
     text-align: center;
 
-    ${props =>
-    !props.available &&
-    css`
+    ${(props) =>
+      !props.available &&
+      css`
         opacity: 0.3;
       `};
 
@@ -107,7 +109,7 @@ export const Container = styled.div`
           left: 0;
           right: 0;
           bottom: 0;
-          background-color: #c72828;
+          background-color: #c32828;
           -webkit-transition: 0.4s;
           transition: 0.4s;
           border-radius: 16px;
